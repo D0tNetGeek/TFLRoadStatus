@@ -2,6 +2,8 @@
 {
     public interface IConfig
     {
-        object Url { get; }
+        string AppId { get; set; }
+        string AppKey { get; set; }
+        string Url { get; set; }
     }
 }
