@@ -3,5 +3,6 @@
     public interface IRoadStatusValidator
     {
         int GetCurrentRoadStatus(string road);
+        IPrint Print { get; }
     }
 }
