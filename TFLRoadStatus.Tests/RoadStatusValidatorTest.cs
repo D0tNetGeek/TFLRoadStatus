@@ -12,7 +12,7 @@ namespace TFLRoadStatus.Tests
         private string _road;
         private readonly IRestClient _restClient;
         private readonly Mock<IPrint> _printMock;
-        private readonly IRoadStatusValidator _roadStatusValidator;
+        private readonly RoadStatusValidator _roadStatusValidator;
         private readonly Mock<IConfig> _configMock;
         private int expectedExitCode;
 
@@ -36,7 +36,8 @@ namespace TFLRoadStatus.Tests
             var actualExitCode = _roadStatusValidator.GetCurrentRoadStatus(_road);
 
             Assert.Equal(expectedExitCode, actualExitCode);
-            _printMock.Verify(x=>x.AddError(_road), Times.Once);
+
+            _printMock.Verify(x => x.AddHeader(_road), Times.Once);
             _printMock.Verify(x => x.PrintStatus(), Times.Once);
         }
 
@@ -50,6 +51,7 @@ namespace TFLRoadStatus.Tests
             var actualExitCode = _roadStatusValidator.GetCurrentRoadStatus(_road);
 
             Assert.Equal(expectedExitCode, actualExitCode);
+
             _printMock.Verify(x => x.AddError(_road), Times.Once);
             _printMock.Verify(x => x.PrintStatus(), Times.Once);
         }
