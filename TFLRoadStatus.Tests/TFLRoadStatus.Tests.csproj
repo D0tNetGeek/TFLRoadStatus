@@ -114,6 +114,10 @@
       <Project>{8153688B-37CF-4858-9C9D-5E1ED8558A0D}</Project>
       <Name>TFLRoadStatus.API</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TFLRoadStatus.Stubs\TFLRoadStatus.Stubs.csproj">
+      <Project>{86C1ACD8-6B1B-401D-9053-116A3A4ED3F2}</Project>
+      <Name>TFLRoadStatus.Stubs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -2,18 +2,19 @@
 using System.Net.Http;
 using TFLRoadStatus.API;
 using TFLRoadStatus.API.Interfaces;
+using TFLRoadStatus.Stubs;
 using Xunit;
 
 namespace TFLRoadStatus.Tests
 {
     public class RoadStatusValidatorTest
     {
-        private string Road;
+        private string _road;
         private readonly IRestClient _restClient;
         private readonly Mock<IPrint> _printMock;
         private readonly IRoadStatusValidator _roadStatusValidator;
         private readonly Mock<IConfig> _configMock;
-        private int _expectedExitCode;
+        private int expectedExitCode;
 
         public RoadStatusValidatorTest()
         {
@@ -28,7 +29,15 @@ namespace TFLRoadStatus.Tests
         [Fact]
         public void When_Valid_Request_Is_Executed_Returns_RoadStatus()
         {
+            _road = "A2";
+            expectedExitCode = 0;
+            _configMock.Setup(x => x.Url).Returns(() => "http://localhost/HttpStatus200");
 
+            var actualExitCode = _roadStatusValidator.GetCurrentRoadStatus(_road);
+
+            Assert.Equal(expectedExitCode, actualExitCode);
+            _printMock.Verify(x=>x.AddError(_road), Times.Once);
+            _printMock.Verify(x => x.PrintStatus(), Times.Once);
         }
     }
 }
