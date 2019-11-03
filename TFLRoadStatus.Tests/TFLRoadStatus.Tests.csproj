@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HttpClientTest.cs" />
+    <Compile Include="PrintTest.cs" />
     <Compile Include="RoadStatusValidatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
