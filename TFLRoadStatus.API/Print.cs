@@ -6,28 +6,43 @@ namespace TFLRoadStatus.API
 {
     public class Print : IPrint
     {
-        public Dictionary<string, string> ReportConstants => throw new System.NotImplementedException();
+        public Dictionary<string, string> ReportConstants { get; } = new Dictionary<string, string>()
+        {
+            { "statusSeverity", "Road Status" },
+            { "statusSeverityDescription", "Road Status Description" }
+        };
 
-        public StringBuilder Message { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public StringBuilder Message { get; set; } = new StringBuilder();
 
         public IPrint AddError(string text)
         {
-            throw new System.NotImplementedException();
+            Message.AppendLine($"{text} is not a valid road");
+
+            return this;
         }
 
         public IPrint AddHeader(string text)
         {
-            throw new System.NotImplementedException();
+            Message.AppendLine($"The status of the {text} is as follows");
+
+            return this;
         }
 
         public IPrint AddHelp()
         {
-            throw new System.NotImplementedException();
+            Message.Clear();
+
+            Message.AppendLine($"Please enter:");
+            Message.AppendLine($"\tRoadStatus <RoadName>");
+
+            return this;
         }
 
         public IPrint AddRoadStatusText(string key, string text)
         {
-            throw new System.NotImplementedException();
+            Message.AppendLine($"\t{ReportConstants[key]} is {text}");
+
+            return this;
         }
 
         public void PrintStatus()
