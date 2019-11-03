@@ -49,7 +49,7 @@ namespace TFLRoadStatus.API
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 //TODO: Implement Logging
             }
@@ -59,16 +59,16 @@ namespace TFLRoadStatus.API
 
         private void PrintStatus()
         {
-            Print.AddHeader(_severityStatus.displayName);
-            Print.AddRoadStatusText("statusSeverity", _severityStatus.statusSeverity);
-            Print.AddRoadStatusText("statusSeverityDescription", _severityStatus.statuSeverityDescription);
-            Print.PrintStatus();
+            _print.AddHeader(_severityStatus.displayName);
+            _print.AddRoadStatusText("statusSeverity", _severityStatus.statusSeverity);
+            _print.AddRoadStatusText("statusSeverityDescription", _severityStatus.statusSeverityDescription);
+            _print.PrintStatus();
         }
 
         private void PrintError(string road)
         {
-            Print.AddError(road);
-            Print.PrintStatus();
+            _print.AddError(road);
+            _print.PrintStatus();
         }
     }
 }
