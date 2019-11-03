@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using TFLRoadStatus.API.Interfaces;
 
@@ -47,7 +48,7 @@ namespace TFLRoadStatus.API
 
         public void PrintStatus()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine(Message.ToString());
         }
     }
 }
