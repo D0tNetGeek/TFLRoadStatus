@@ -39,8 +39,10 @@
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Interfaces\IPrint.cs" />
     <Compile Include="Interfaces\IRestClient.cs" />
+    <Compile Include="Interfaces\IRoadStatusValidator.cs" />
     <Compile Include="Print.cs" />
     <Compile Include="RestClient.cs" />
+    <Compile Include="RoadStatusValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
