@@ -2,5 +2,6 @@
 {
     public interface IConfig
     {
+        object Url { get; }
     }
 }
