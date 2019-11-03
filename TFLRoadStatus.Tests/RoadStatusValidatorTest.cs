@@ -39,5 +39,19 @@ namespace TFLRoadStatus.Tests
             _printMock.Verify(x=>x.AddError(_road), Times.Once);
             _printMock.Verify(x => x.PrintStatus(), Times.Once);
         }
+
+        [Fact]
+        public void When_Invalid_Request_Is_Executed_Returns_NotFound_Error()
+        {
+            _road = "A223";
+            expectedExitCode = 1;
+            _configMock.Setup(x => x.Url).Returns(() => "http://localhost/HttpStatus404");
+
+            var actualExitCode = _roadStatusValidator.GetCurrentRoadStatus(_road);
+
+            Assert.Equal(expectedExitCode, actualExitCode);
+            _printMock.Verify(x => x.AddError(_road), Times.Once);
+            _printMock.Verify(x => x.PrintStatus(), Times.Once);
+        }
     }
 }
