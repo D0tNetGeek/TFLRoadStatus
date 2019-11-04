@@ -71,5 +71,5 @@ contains unit tests using xUnit</br></br>
 
 <ul>
 	<li>TFLRoadStatus.Specs are written to mock the TFL API URL and configuration</li>
-	<li>Used Aufo DI container to decouple and to remove dependencies between projects<li>
+	<li>Used Aufo DI container to decouple and to remove dependencies between projects</li>
 </ul>
