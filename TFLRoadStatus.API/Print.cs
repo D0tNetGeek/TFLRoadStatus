@@ -34,7 +34,7 @@ namespace TFLRoadStatus.API
             Message.Clear();
 
             Message.AppendLine($"Please enter:");
-            Message.AppendLine($"\tRoadStatus <RoadName>");
+            Message.AppendLine($"\tTFLRoadStatus.Console <RoadName>");
 
             return this;
         }

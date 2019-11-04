@@ -12,7 +12,7 @@ namespace TFLRoadStatus.API
 
         public Config()
         {
-            var settings = (NameValueCollection)ConfigurationManager.GetSection("tflRoadStatusSettings");
+            var settings = (NameValueCollection)ConfigurationManager.GetSection("tflRoadStatusAppSettings");
 
             AppId = settings["app_id"]?.ToString() ?? null;
             AppKey = settings["app_key"]?.ToString() ?? null;

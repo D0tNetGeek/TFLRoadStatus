@@ -44,7 +44,7 @@ namespace TFLRoadStatus.API
 
         private string CreateUrl(string road)
         {
-            return string.Format(_config.Url + "{0}?app_id{1}&app_key={2}", road, _config.AppId, _config.AppKey);
+            return string.Format(_config.Url + "{0}?app_id={1}&app_key={2}", road, _config.AppId, _config.AppKey);
         }
     }
 }
