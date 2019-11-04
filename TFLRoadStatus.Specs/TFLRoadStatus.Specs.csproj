@@ -40,6 +40,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="Gherkin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecFlow.xUnitAdapter.1.2.1\lib\net45\Gherkin.dll</HintPath>
     </Reference>
@@ -94,10 +97,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\HttpNotFoundErrorSteps.cs" />
     <Compile Include="Steps\SeverityStatusSteps.cs" />
+    <Compile Include="TFLRoadStatusContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
