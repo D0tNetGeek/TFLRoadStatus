@@ -17,6 +17,9 @@ namespace TFLRoadStatus.API
 
         public IPrint Print => throw new NotImplementedException();
 
+        public SeverityStatus SeverityStatus { get; set; }
+        public NotFoundStatus HttpNotFoundError { get; set; }
+
         public RoadStatusValidator(IRestClient restClient, IPrint print)
         {
             _restClient = restClient;
