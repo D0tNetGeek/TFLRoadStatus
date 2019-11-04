@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFLRoadStatus.Stubs", "TFLR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLRoadStatus.Specs", "TFLRoadStatus.Specs\TFLRoadStatus.Specs.csproj", "{1492BECE-60B5-4B1A-BEBE-2BB5C4C9F536}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLRoadStatus.Integration.Tests", "TFLRoadStatus.Integration.Tests\TFLRoadStatus.Integration.Tests.csproj", "{80374840-A52D-4B07-B275-58A810A58D49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1492BECE-60B5-4B1A-BEBE-2BB5C4C9F536}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1492BECE-60B5-4B1A-BEBE-2BB5C4C9F536}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1492BECE-60B5-4B1A-BEBE-2BB5C4C9F536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80374840-A52D-4B07-B275-58A810A58D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80374840-A52D-4B07-B275-58A810A58D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80374840-A52D-4B07-B275-58A810A58D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80374840-A52D-4B07-B275-58A810A58D49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
