@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLRoadStatus.Specs", "TFLR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLRoadStatus.Integration.Tests", "TFLRoadStatus.Integration.Tests\TFLRoadStatus.Integration.Tests.csproj", "{80374840-A52D-4B07-B275-58A810A58D49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLRoadStatus.Console", "TFLRoadStatus.Console\TFLRoadStatus.Console.csproj", "{678A89EC-6969-49ED-90E9-02ADB4481369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{80374840-A52D-4B07-B275-58A810A58D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80374840-A52D-4B07-B275-58A810A58D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80374840-A52D-4B07-B275-58A810A58D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678A89EC-6969-49ED-90E9-02ADB4481369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678A89EC-6969-49ED-90E9-02ADB4481369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678A89EC-6969-49ED-90E9-02ADB4481369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678A89EC-6969-49ED-90E9-02ADB4481369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
